@@ -6,6 +6,7 @@
 //
 
 #import "TargetVideoMediationAdapter.h"
+#import "AppLovinSDK/AppLovinSDK.h"
 
 @implementation TargetVideoMediationAdapter
 
@@ -15,7 +16,7 @@
                completionHandler:(void (^)(MAAdapterInitializationStatus, NSString * _Nullable))completionHandler
 {
     NSLog(@"[TargetVideoMediationAdapter] Initializing adapter with parameters: %@", parameters);
-    completionHandler(MAAdapterInitializationStatusInitialized, nil); // Successful initialization
+    completionHandler(MAAdapterInitializationStatusInitializing, nil);
 }
 
 - (NSString *)sdkVersion
@@ -35,7 +36,7 @@
 
 #pragma mark - MAAdViewAdapter Methods
 
-- (void)loadAdViewAdForParameters:(id<MAAdViewAdapterParameters>)parameters
+- (void)loadAdViewAdForParameters:(id<MAAdapterParameters>)parameters
                          adFormat:(MAAdFormat *)adFormat
                          delegate:(id<MAAdViewAdapterDelegate>)delegate
 {
@@ -98,11 +99,11 @@
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [delegate didDisplayRewardedAd];
-        [delegate didStartRewardedAdVideo];
+//        [delegate didStartRewardedAdVideo];
 
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [delegate didCompleteRewardedAdVideo];
-            [delegate didRewardUserWithReward:[[MAReward alloc] initWithLabel:@"Reward" amount:@1]];
+//            [delegate didCompleteRewardedAdVideo];
+//            [delegate didRewardUserWithReward:[[MAReward alloc] initWithLabel:@"Reward" amount:@1]];
             [delegate didHideRewardedAd];
             NSLog(@"[TargetVideoMediationAdapter] Rewarded Ad finished and user rewarded");
         });

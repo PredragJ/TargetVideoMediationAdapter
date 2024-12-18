@@ -1,0 +1,6 @@
+framework module Pods_TargetVideoMediationAdapter {
+  umbrella header "Pods-TargetVideoMediationAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

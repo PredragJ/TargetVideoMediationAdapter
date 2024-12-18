@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9E5206EDCD03B32942E17E1F /* Pods_TargetVideoMediationAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FC8C0A7DA62DFF3F247C80 /* Pods_TargetVideoMediationAdapter.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		05FC8C0A7DA62DFF3F247C80 /* Pods_TargetVideoMediationAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TargetVideoMediationAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39FD5AACB8F72A579AD25684 /* Pods-TargetVideoMediationAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetVideoMediationAdapter.debug.xcconfig"; path = "Target Support Files/Pods-TargetVideoMediationAdapter/Pods-TargetVideoMediationAdapter.debug.xcconfig"; sourceTree = "<group>"; };
+		998F00C7C6B38468DDF390BB /* Pods-TargetVideoMediationAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetVideoMediationAdapter.release.xcconfig"; path = "Target Support Files/Pods-TargetVideoMediationAdapter/Pods-TargetVideoMediationAdapter.release.xcconfig"; sourceTree = "<group>"; };
 		AAF398362D0EFAEF000217A9 /* TargetVideoMediationAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TargetVideoMediationAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5206EDCD03B32942E17E1F /* Pods_TargetVideoMediationAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BB0FADB83EA6048F69E436F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05FC8C0A7DA62DFF3F247C80 /* Pods_TargetVideoMediationAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43D40206C8DFB37536E04713 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39FD5AACB8F72A579AD25684 /* Pods-TargetVideoMediationAdapter.debug.xcconfig */,
+				998F00C7C6B38468DDF390BB /* Pods-TargetVideoMediationAdapter.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AAF3982C2D0EFAEF000217A9 = {
 			isa = PBXGroup;
 			children = (
 				AAF398382D0EFAEF000217A9 /* TargetVideoMediationAdapter */,
 				AAF398372D0EFAEF000217A9 /* Products */,
+				43D40206C8DFB37536E04713 /* Pods */,
+				3BB0FADB83EA6048F69E436F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +103,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAF3983C2D0EFAEF000217A9 /* Build configuration list for PBXNativeTarget "TargetVideoMediationAdapter" */;
 			buildPhases = (
+				F40EA22A40793BE1B11F9243 /* [CP] Check Pods Manifest.lock */,
 				AAF398312D0EFAEF000217A9 /* Headers */,
 				AAF398322D0EFAEF000217A9 /* Sources */,
 				AAF398332D0EFAEF000217A9 /* Frameworks */,
@@ -88,8 +117,6 @@
 				AAF398382D0EFAEF000217A9 /* TargetVideoMediationAdapter */,
 			);
 			name = TargetVideoMediationAdapter;
-			packageProductDependencies = (
-			);
 			productName = TargetVideoMediationAdapter;
 			productReference = AAF398362D0EFAEF000217A9 /* TargetVideoMediationAdapter.framework */;
 			productType = "com.apple.product-type.framework";
@@ -137,6 +164,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F40EA22A40793BE1B11F9243 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TargetVideoMediationAdapter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AAF398322D0EFAEF000217A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -150,6 +202,7 @@
 /* Begin XCBuildConfiguration section */
 		AAF3983D2D0EFAEF000217A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39FD5AACB8F72A579AD25684 /* Pods-TargetVideoMediationAdapter.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -183,6 +236,7 @@
 		};
 		AAF3983E2D0EFAEF000217A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 998F00C7C6B38468DDF390BB /* Pods-TargetVideoMediationAdapter.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
